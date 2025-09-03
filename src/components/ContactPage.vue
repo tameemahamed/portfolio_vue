@@ -71,7 +71,7 @@ const handleSubmit = async (event) => {
         // Clear the message after a few seconds
         setTimeout(() => {
             formMessage.value = '';
-        }, 5000);
+        }, 10000);
 
     } catch (error) {
         console.error("Form submission error:", error);
@@ -80,3 +80,9 @@ const handleSubmit = async (event) => {
 };
 </script>
 
+<style scoped>
+.form-message {
+  margin-top: 15px;
+  color: var(--vegas-gold);
+}
+</style>
