@@ -1,7 +1,7 @@
 import { reactive, readonly } from 'vue';
 import Papa from 'papaparse';
 
-// !!! IMPORTANT: Replace this with your own Google Sheet ID !!!
+// Replace this with your own Google Sheet ID
 const SHEET_ID = '17PBZ4Mjqa4JPKn9glnubY_mDjts_aIi8d9leIU76a0o';
 
 console.log(SHEET_ID);

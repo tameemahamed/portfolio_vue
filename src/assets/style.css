@@ -219,7 +219,7 @@ article { display: none; }
 .sidebar {
     margin-bottom: 15px;
     max-height: 112px;
-    overflow: hidden;
+    overflow: visible;
     padding: 15px;
     transition: var(--transition2);
 }
@@ -290,12 +290,13 @@ article { display: none; }
     opacity: 0;
     visibility: hidden;
     transition: var(--transition2);
+    width: max-content;
 }
 
-    .sidebar.active .sidebar-info-more {
-        opacity: 1;
-        visibility: visible;
-    }
+.sidebar.active .sidebar-info-more {
+    opacity: 1;
+    visibility: visible;
+}
 
 .contacts-list {
     display: grid;
