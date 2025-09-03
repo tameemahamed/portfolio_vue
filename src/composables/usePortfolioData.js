@@ -2,10 +2,7 @@ import { reactive, readonly } from 'vue';
 import Papa from 'papaparse';
 
 // Replace this with your own Google Sheet ID
-const SHEET_ID = '17PBZ4Mjqa4JPKn9glnubY_mDjts_aIi8d9leIU76a0o';
-
-console.log(SHEET_ID);
-
+const SHEET_ID = import.meta.env.VITE_SHEET_ID || '';
 
 // The names of the tabs in your Google Sheet
 const SHEET_NAMES = ['Info', 'About', 'Education', 'Experience', 'Skills', 'Certifications', 'Projects'];
