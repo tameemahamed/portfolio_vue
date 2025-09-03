@@ -1,5 +1,5 @@
 <template>
-    <article class="projects" data-page="projects">
+    <article class="projects active" data-page="projects">
         <header>
             <h2 class="h2 article-title">Projects</h2>
         </header>
@@ -23,45 +23,3 @@ defineProps({
 });
 </script>
 
-<style scoped>
-/* Add these styles to your style.css or here */
-.project-items {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.project-card {
-    background: var(--eerie-black-2);
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: var(--shadow-2);
-}
-
-.project-title {
-    margin-bottom: 10px;
-}
-
-.project-description {
-    color: var(--light-gray);
-    line-height: 1.6;
-    font-size: var(--fs-6);
-    margin-bottom: 20px;
-}
-
-.project-links {
-    display: flex;
-    gap: 15px;
-}
-
-.project-link {
-    color: var(--vegas-gold);
-    font-size: var(--fs-8);
-    font-weight: var(--fw-500);
-}
-
-.project-link:hover {
-    text-decoration: underline;
-}
-</style>

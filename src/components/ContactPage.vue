@@ -1,12 +1,12 @@
 <template>
-    <article class="contact" data-page="contact">
+    <article class="contact active" data-page="contact">
         <header>
             <h2 class="h2 article-title">Contact</h2>
         </header>
 
         <section class="mapbox" data-mapbox>
             <figure>
-                <iframe :src="info.googleMapUrl" width="400" height="300" loading="lazy"></iframe>
+                <iframe width="720" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=Chittagong,%20Bangladesh+(My%20Business%20Name)&amp;t=k&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             </figure>
         </section>
 
@@ -21,7 +21,7 @@
                 </div>
                 <textarea name="entry.1126869933" class="form-input" placeholder="Your Message" required
                     data-form-input></textarea>
-                <button class="form-btn" type="submit" :disabled="isButtonDisabled">
+                <button class="form-btn" type="submit">
                     <ion-icon name="paper-plane"></ion-icon>
                     <span>Send Message</span>
                 </button>
@@ -80,15 +80,3 @@ const handleSubmit = async (event) => {
 };
 </script>
 
-<style scoped>
-.form-message {
-    margin-top: 15px;
-    color: var(--vegas-gold);
-}
-
-/* Style for disabled button */
-.form-btn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-</style>
