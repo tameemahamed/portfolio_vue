@@ -36,7 +36,7 @@ npm install
 ## Setup Google Sheet
 
 **Sheet Layout**
-Just make a copy of this [https://docs.google.com/spreadsheets/d/1rg3HFf-tgU7dMu0OJZs2cjnyINoX77cxn_Glj49HwoI/edit?gid=2136194534#gid=2136194534](Google Sheet) and put your own informations in there.
+Just make a copy of this [Google Sheet](https://docs.google.com/spreadsheets/d/1rg3HFf-tgU7dMu0OJZs2cjnyINoX77cxn_Glj49HwoI/edit) and put your own informations in there.
 
 **How to get the Google Sheet ID**
 1. Open your Google Sheet in the browser.
