@@ -1,47 +1,56 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div v-if="state.loading" class="loader">Loading Portfolio...</div>
+  <div v-if="state.error" class="error">{{ state.error }}</div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <main v-if="!state.loading && !state.error && portfolioData">
+    <Sidebar :info="portfolioData.info" />
+    <div class="main-content">
+      <Navbar @navigate="handleNavigation" :active-page="activePage" />
+
+      <AboutPage v-if="activePage === 'about'" :data="portfolioData" />
+      <ResumePage v-if="activePage === 'resume'" :data="portfolioData" />
+      <CertificationsPage v-if="activePage === 'certifications'" :certifications="portfolioData.certifications" />
+      <ProjectsPage v-if="activePage === 'projects'" :projects="portfolioData.projects" />
+      <ContactPage v-if="activePage === 'contact'" :info="portfolioData.info" />
+
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
   </main>
 </template>
 
+<script setup>
+import { ref, computed } from 'vue';
+import { usePortfolioData } from './composables/usePortfolioData';
+import Sidebar from './components/Sidebar.vue';
+import Navbar from './components/Navbar.vue';
+import AboutPage from './components/AboutPage.vue';
+import ResumePage from './components/ResumePage.vue';
+import CertificationsPage from './components/CertificationsPage.vue';
+import ProjectsPage from './components/ProjectsPage.vue';
+import ContactPage from './components/ContactPage.vue';
+
+const { state } = usePortfolioData();
+const portfolioData = computed(() => state.data);
+
+const activePage = ref('about');
+
+const handleNavigation = (page) => {
+  activePage.value = page.toLowerCase();
+};
+</script>
+
 <style scoped>
-header {
-  line-height: 1.5;
+/* Add styles for loader and error message if you want */
+.loader,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+  color: #ccc;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.error {
+  color: red;
 }
 </style>
