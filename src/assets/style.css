@@ -713,15 +713,6 @@ textarea.form-input {
     justify-content: flex-start;
   }
 
-  .info-more-btn {
-    display: none;
-  }
-
-  .sidebar-info-more {
-    display: block;
-    opacity: 1;
-  }
-
   .main-content {
     width: 100%;
     margin-top: 0;
@@ -729,7 +720,7 @@ textarea.form-input {
 
   .mapbox {
     height: 480px;
-    border-radius: 0px;
+    border-radius: 12px;
   }
 
 }
