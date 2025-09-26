@@ -67,7 +67,7 @@ defineProps({
     info: Object
 });
 
-const isMoreInfoVisible = ref(false);
+const isMoreInfoVisible = ref(true);
 
 const toggleMoreInfo = () => {
     isMoreInfoVisible.value = !isMoreInfoVisible.value;
