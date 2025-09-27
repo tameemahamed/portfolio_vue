@@ -6,7 +6,7 @@
         <section class="project-items">
             <div class="project-card" v-for="(project, index) in projects" :key="index">
                 <h3 class="h3 project-title">{{ project.title }}</h3>
-                <p class="project-description">{{ project.description }}</p>
+                <p class="project-description" v-html="renderMarkdown(project.description)"></p>
                 <div class="project-links">
                     <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" class="project-link">Live Demo</a>
                     <a v-if="project.sourceUrl" :href="project.sourceUrl" target="_blank" class="project-link">Source
@@ -18,8 +18,14 @@
 </template>
 
 <script setup>
+import { marked } from 'marked';
+
 defineProps({
     projects: Array
 });
+
+const renderMarkdown = (text) => {
+    return marked.parse(text || "");
+};
 </script>
 
