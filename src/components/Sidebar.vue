@@ -17,8 +17,9 @@
             </button>
         </div>
 
+        <div class="separator"></div>
+
         <div class="sidebar-info-more">
-            <div class="separator"></div>
             <ul class="contacts-list">
                 <li class="contact-item">
                     <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
@@ -43,21 +44,22 @@
                 </li>
             </ul>
             <div class="separator"></div>
-            <ul class="social-list">
-                <li class="social-item" v-if="info.github"><a :href="info.github" target="_blank"
-                        class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
-                <li class="social-item" v-if="info.linkedin"><a :href="info.linkedin" target="_blank"
-                        class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                <li class="social-item" v-if="info.whatsapp"><a :href="info.whatsapp" target="_blank"
-                        class="social-link"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
-                <li class="social-item" v-if="info.twitter"><a :href="info.twitter" target="_blank"
-                        class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                <li class="social-item" v-if="info.instagram"><a :href="info.instagram" target="_blank"
-                        class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                <li class="social-item" v-if="info.facebook"><a :href="info.facebook" target="_blank"
-                        class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-            </ul>
         </div>
+        
+        <ul class="social-list">
+            <li class="social-item" v-if="info.github"><a :href="info.github" target="_blank"
+                    class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
+            <li class="social-item" v-if="info.linkedin"><a :href="info.linkedin" target="_blank"
+                    class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li class="social-item" v-if="info.whatsapp"><a :href="info.whatsapp" target="_blank"
+                    class="social-link"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            <li class="social-item" v-if="info.twitter"><a :href="info.twitter" target="_blank"
+                    class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li class="social-item" v-if="info.instagram"><a :href="info.instagram" target="_blank"
+                    class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li class="social-item" v-if="info.facebook"><a :href="info.facebook" target="_blank"
+                    class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        </ul>
     </aside>
 </template>
 
