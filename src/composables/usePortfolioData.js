@@ -65,7 +65,8 @@ const fetchData = async () => {
 
     } catch (err) {
         console.error("Error fetching portfolio data:", err);
-        state.error = 'Failed to load portfolio data. Please check the Sheet ID and ensure all sheets are published correctly.';
+        state.error = "Hello! I'm Tameem Ahamed, a full-stack web developer from Bangladesh.\n" +
+        "If you're seeing this message, the portfolio data is just taking a moment to load. Thanks for your patience!";
     } finally {
         state.loading = false;
     }
