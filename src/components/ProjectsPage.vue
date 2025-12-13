@@ -9,8 +9,8 @@
                 <p class="project-description" v-html="renderMarkdown(project.description)"></p>
                 <div class="project-links">
                     <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" class="project-link">Live Demo</a>
-                    <a v-if="project.sourceUrl" :href="project.sourceUrl" target="_blank" class="project-link">Source
-                        Code</a>
+                    <a v-if="project.sourceUrl" :href="project.sourceUrl" target="_blank" class="project-link">Source Code</a>
+                    <a v-if="project.caseStudy" :href="project.caseStudy" target="_blank" class="project-link">Case Study</a> 
                 </div>
             </div>
         </section>

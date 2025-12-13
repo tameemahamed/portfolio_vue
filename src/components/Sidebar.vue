@@ -2,7 +2,7 @@
     <aside class="sidebar" :class="{ active: isMoreInfoVisible }" data-sidebar>
         <div class="sidebar-info">
             <figure class="avatar-box">
-                <img class="my-img" src="/my-photo.png" alt="avatar" width="80">
+                <img class="my-img" :src="info.display_picture_url" alt="avatar" width="80">
             </figure>
 
             <div class="info-content">
