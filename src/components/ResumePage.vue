@@ -18,7 +18,7 @@
         </section>
         <section class="timeline">
             <div class="title-wrapper">
-                <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+                <div class="icon-box"><ion-icon name="briefcase"></ion-icon></div>
                 <h3 class="h3">Experience</h3>
             </div>
             <ol class="timeline-list">
